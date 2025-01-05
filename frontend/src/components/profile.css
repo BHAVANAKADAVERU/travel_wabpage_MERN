@@ -1,0 +1,83 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers the content horizontally */
+    justify-content: center; /* This centers the content vertically */
+    margin-bottom: 20px;
+  }
+  
+  .profile-avatar {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center;     /* Vertically center the content */
+    margin-bottom: 20px; /* Space between avatar and profile text */
+    width: 120px;          /* Avatar container width */
+    height: 120px;         /* Avatar container height */
+    border-radius: 50%;    /* To make it circular */
+    background-color: #f0f0f0;  /* Light grey background for empty space */
+  }
+  
+  .profile-avatar img {
+    width: 100%;           /* Ensures the image fits inside the avatar container */
+    height: 100%;
+    object-fit: cover;     /* Ensure the image maintains aspect ratio */
+    border-radius: 50%;    /* Makes the image circular */
+  }
+  
+  .profile-header h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .profile form,
+  .profile div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin: 5px 0;
+  }
+  
+  .profile button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .profile button:hover {
+    background-color: #0056b3;
+  }
+  
+  .edit-btn {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    text-decoration: underline;
+  }
+  

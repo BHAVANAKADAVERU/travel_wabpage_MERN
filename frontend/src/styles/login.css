@@ -1,0 +1,152 @@
+/* login.css */
+
+/* Define CSS Variables for easy customization */
+:root {
+  --primary-color: #4e90f1;
+  --primary-color-hover: #3578d1;
+  --input-border-color: #ddd;
+  --input-focus-border-color: #4e90f1;
+  --background-color: #f4f7fa;
+  --form-background: white;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+  --label-color: #555;
+  --button-text-color: white;
+  --input-text-color: #555;
+}
+
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container for Login */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 90%;
+  background-color: var(--background-color);
+}
+
+/* Heading */
+.login h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Styling */
+.login form {
+  display: flex;
+  flex-direction: column; /* Ensures form elements are stacked vertically */
+  background-color: var(--form-background);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px var(--shadow-color);
+  width: 100%;
+  max-width: 420px;
+  animation: slideIn 0.8s ease-out;
+}
+
+/* Label Styling - Make sure the label takes full width and stays on top */
+.login label {
+  font-size: 1rem;
+  color: var(--label-color);
+  margin-bottom: 8px;
+  display: block; /* Makes label take full width and appear above input */
+  text-transform: capitalize;
+  /* Optional: Add a little space between label and input */
+}
+
+/* Input Fields Styling */
+.login input {
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 2px solid var(--input-border-color);
+  border-radius: 6px;
+  outline: none;
+  color: var(--input-text-color);
+  transition: all 0.3s ease;
+  width: 100%; /* Ensure the input takes full width of the form */
+}
+
+.login input:focus {
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 10px rgba(78, 144, 241, 0.2);
+}
+
+/* Button Styling */
+.login button {
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login button:hover {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.05);
+}
+
+.login button:focus {
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+  .login h2 {
+    font-size: 1.5rem;
+  }
+
+  .login form {
+    width: 90%;
+  }
+  
+  .login button {
+    font-size: 1rem;
+  }
+}

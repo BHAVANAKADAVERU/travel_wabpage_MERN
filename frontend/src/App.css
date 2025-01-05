@@ -1,0 +1,98 @@
+/* Basic container styles */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Ensure the layout is column-based */
+  min-height: 100vh; /* Ensure the container takes up at least the full height */
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for content shift */
+  position: relative;
+}
+
+/* Hamburger icon fixed to top-left */
+.hamburger-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1100; /* Ensure it's above other content */
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #888888;
+  color: white;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+  left: 0; /* Align it to the left when opened */
+}
+
+/* Sidebar list styles */
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar item styles */
+.sidebar-item {
+  margin: 20px 0;
+}
+
+/* Sidebar link styles */
+.sidebar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #bebebe;
+}
+
+/* Content area styling */
+.content {
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out; /* Smooth margin shift */
+  flex-grow: 1; /* Make sure content takes up remaining space */
+  width: 100%;
+  margin-top: 60px; /* Give space for header or navigation (if exists) */
+  margin-bottom: 100px; /* Leave space for footer */
+}
+
+/* When sidebar is open, shift the content to the right */
+.app-container.sidebar-open .content {
+  margin-left: 250px; /* Adjust content when sidebar is open */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar takes up full width on small screens */
+    left: -100%; /* Initially hide off-screen */
+  }
+
+  .sidebar.open {
+    left: 0; /* Show sidebar when open */
+  }
+
+  .content {
+    margin-left: 0; /* No margin shift for content */
+  }
+}

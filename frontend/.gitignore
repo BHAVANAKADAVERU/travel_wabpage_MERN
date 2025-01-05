@@ -1,0 +1,13 @@
+ECHO is on.
+# Node.js dependencies
+node_modules/
+
+# Build output (after running `npm run build`)
+build/
+
+# Local environment variables
+.env
+
+
+# Windows files
+Thumbs.db

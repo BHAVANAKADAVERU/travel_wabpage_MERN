@@ -1,0 +1,84 @@
+/* Sidebar Container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333; /* Dark background for sidebar */
+  color: white;
+  overflow-y: auto; /* Add scrolling for overflow content */
+  transform: translateX(-100%); /* Initially hidden */
+  transition: transform 0.3s ease-in-out; /* Smooth slide-in/out animation */
+  z-index: 1000; /* Ensure it appears above all content */
+}
+
+/* Sidebar Open State */
+.sidebar.open {
+  transform: translateX(0); /* Slide in when open */
+}
+
+/* Sidebar List */
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidebar Items */
+.sidebar-item {
+  margin: 15px 0;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px 20px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.sidebar-link:hover {
+  background-color: #444; /* Slightly lighter background on hover */
+  color: #ee923c; /* Highlight color for links */
+}
+
+/* Logout Button */
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  padding: 12px 20px;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Logout Button */
+.logout-button:hover {
+  background-color: #444;
+  color: #f44336; /* Red highlight for logout button */
+}
+
+/* Sidebar Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Narrower sidebar for smaller screens */
+  }
+
+  .sidebar-link {
+    font-size: 16px; /* Smaller font size for links */
+  }
+
+  .logout-button {
+    font-size: 16px;
+  }
+}

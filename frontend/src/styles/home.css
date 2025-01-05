@@ -1,0 +1,120 @@
+/* Ensure the HTML and body take up full height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Make sure the main content expands and can scroll */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .container {
+    flex-grow: 1; /* Allow content to grow and take available space */
+  }
+  
+  /* Allow content sections to grow and fill */
+  section {
+    padding: 60px 0;
+    margin-bottom: 20px;
+  }
+  
+  .hero__content {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero__content h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  
+  .hero__content p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+  }
+  
+  /* Styling for images and video */
+  .hero__img-box img,
+  .hero__img-box video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .hero__img-box {
+    margin-bottom: 20px;
+  }
+  
+  /* Service List */
+  .services__subtitle {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .services__title {
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+  
+  /* Experience Section */
+  .experience__countent {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .experience__countent h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .counter__box {
+    background-color: #ee6e6e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+  }
+  
+  .counter__box span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .counter__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  /* Masonry Gallery */
+  .gallery__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  /* Testimonial Section */
+  .testimonial__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  
